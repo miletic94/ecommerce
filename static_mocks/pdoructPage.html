@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+        rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="productPage.css">
+        <title>Product Page</title>
+    </head>
+    <body>
+        <nav>
+            <div class="navGrid">
+                <div class="dFlex alignCenter gapSm navigation">
+                    <span class="material-icons-outlined hoverSecondary cursorPointer">
+                        menu
+                    </span>
+                    <div class="brand cursorPointer">
+                        <a href="#">
+                            amazona
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                <div class="dFlex alignCenter gapSm userAction justifySelfEnd">
+                    <div class="fontSm hoverSecondary cursorPointer">
+                        Sign In
+                    </div>
+                    <span class="shoppingCart material-icons-outlined hoverSecondary cursorPointer">
+                        shopping_cart
+                    </span>
+                </div>
+            <!-- </div> -->
+            <div class="searchBar dFlex alignCenter spaceBetween">
+                <input type="text" placeholder="Search Amazona" />
+                <button>
+                    <span class="material-icons-outlined searchIcon cursorPointer brightnessLower">
+                        search
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="product">
+            <img class="imgLg" src="https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg" alt="product" />
+            <div class="productText">
+                <h2 class="productName">Title</h2>
+                <div class="ratingRow">
+                    <div class="rating fontSm">
+                        <span class="material-icons-outlined">
+                            star
+                        </span>
+                        <span class="material-icons-outlined">
+                            star
+                        </span>
+                        <span class="material-icons-outlined">
+                            star
+                        </span>
+                        <span class="material-icons-outlined">
+                            star_half
+                        </span>
+                        <span class="material-icons-outlined">
+                            star_outlined
+                        </span>
+                    </div>
+                    <div class="ratingCount">
+                        245
+                    </div>
+                    
+                </div>
+                <p class="description">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo aliquam officia nobis ab at minus minima corporis ipsum odio unde! A dicta est magni impedit?
+                </p>
+                <div class="putInCartAction">
+                    <div class="selectionRow">
+                        <select name="quantity" class="quantity">
+                            <option value="1">Qty: 1</option>
+                            <option value="2">Qty: 2</option>
+                            <option value="3">Qty: 3</option>
+                            <option value="4">Qty: 4</option>
+                        </select>
+                        <div class="price">
+                            $68.9
+                        </div>
+                    </div>
+                    
+                    
+                    <button class="btnPrimary brightnessLower">
+                        Add to Cart
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>
