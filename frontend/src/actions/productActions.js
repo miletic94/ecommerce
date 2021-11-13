@@ -22,3 +22,27 @@ export const listProducts = () => async dispatch => {
             })
         }
     }
+
+export const productDetails = (productId) => async dispatch => {
+    dispatch({
+        type: actions.PRODUCT_DETAILS_REQUEST
+    })
+    try {
+        const { data } = await Axios.get(`/api/products/${productId}`)
+        dispatch({
+            type: actions.PRODUCT_DETAILS_SUCCESS,
+            payload: {
+                product: {...data}
+            }
+        })
+    } catch (error) {
+        dispatch({
+            type: actions.PRODUCT_DETAILS_FAIL,
+            payload: {
+                error: error.message
+            }
+        })
+    }
+    
+
+}
