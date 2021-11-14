@@ -27,7 +27,7 @@ export default function Nav() {
                 </div> 
                 <div className="searchBar dFlex alignCenter spaceBetween">
                     <input type="text" placeholder="Search Amazona" />
-                    <button>
+                    <button className="btnPrimary">
                         <SearchIcon className="searchIcon cursorPointer brightnessLower" />
                     </button>
                     

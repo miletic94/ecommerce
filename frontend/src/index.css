@@ -204,7 +204,8 @@ main {
 }
 .quantity {
     border-radius: 1rem;
-    background-color: var(--ternary-color);
+    height: 4rem;
+    background-color: white;
     border: solid 1px #cccccc;
     box-shadow: 0px 4px 7px 0px #cccccc;
     margin: 1.8rem 0;
@@ -212,6 +213,49 @@ main {
 .quantity:focus {
     outline: solid 3px rgba(0, 113, 133, 0.5);
     border: solid 1px rgb(0, 113, 133);
+}
+
+/* Cart */
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.cartItem {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: row;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: solid 2px #ccc;
+    border-top: solid 2px #ccc;
+
+    font-size: 1.6rem;
+
+    margin: 1rem 0;
+    padding: 1.2rem clamp(2.4rem, 5vw, 10rem); 
+}
+
+.cartItem > * {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(2.4rem, 8vw, 10rem);
+}
+
+.cartItemTitle {
+    text-align: center;
+    font-weight: 600;
+}
+
+.cartItemPrice {
+    font-weight: 500;
 }
 
 /* General */
@@ -269,6 +313,11 @@ p {
     padding: var(--vertical-padding-small);
 }
 
+img.imgXsm {
+    max-width: 10rem;
+    width:100%;
+    min-width: 5rem;
+}
 img.imgMd {
     max-width: 30rem;
     width:100%;
@@ -312,12 +361,22 @@ img.imgLg {
 
 /* Button */
 
-.btnPrimary {
+button {
     border-radius: 1rem;
-    background-color: var(--secondary-color);
     height: 4rem;
+    padding: 0 1rem; 
     font-size: 1.6rem;
     cursor: pointer;
+    border: solid 1px #cccccc;
+    box-shadow: 0px 4px 7px 0px #cccccc;
+}
+
+.btnPrimary {   
+    background-color: var(--secondary-color);
+}
+
+.btnSecondary {
+    background-color:var(--ternary-color);
 }
 
 /* Colors */ 
@@ -325,6 +384,8 @@ img.imgLg {
     --primary-color: rgb(19, 25, 33);
     --secondary-color: rgb(243, 168, 71);
     --ternary-color: rgb(243, 243, 243);
+    --quartary-color: rgb(86, 103, 122);
+
 
     --primary-text-color: rgb(0, 113, 133);
     --secondary-text-color: rgb(15, 15, 17);
@@ -353,5 +414,16 @@ img.imgLg {
         max-width: 30rem;
         width: 100%;
         height: 50%;
+    }
+    .cartItem {
+        grid-auto-flow: column;
+        align-items: center;
+
+        gap: clamp(2.4rem, 5vw, 10rem);
+
+    }
+    .cartItem > * {
+        display: grid;
+        align-items: center;
     }
 }

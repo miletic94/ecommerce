@@ -12,7 +12,6 @@ export default function ProductPage() {
     const data = useSelector(state => state.productDetailsList)
     const {loading, product, error} = data
 
-    console.log(product)
     const [qty, setQty] = useState(1)
     const dispatch = useDispatch()
     useEffect(() => {
