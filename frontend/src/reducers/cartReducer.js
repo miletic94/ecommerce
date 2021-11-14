@@ -1,8 +1,18 @@
 import * as actions from "../constants/cartConstants"
+import { APP_NAME } from "../constants/mainConstants"
+
+const localStorageItem = `${APP_NAME}-shopping-cart`
+const isShoppingCardInLocalStoraqge = !!localStorage.getItem(localStorageItem)
+console.log( isShoppingCardInLocalStoraqge ) 
+console.log(JSON.parse(localStorage.getItem(localStorageItem)))
 
 export default function cartReducer(
-    state = 
-    {cartItems: []}, 
+    state = isShoppingCardInLocalStoraqge ?
+        JSON.parse(localStorage.getItem(localStorageItem))
+     :
+    {
+        cartItems: []
+    }, 
     action) {
     switch(action.type) {
         case actions.ADD_TO_CART:
