@@ -3,8 +3,6 @@ import { APP_NAME } from "../constants/mainConstants"
 
 const localStorageItem = `${APP_NAME}-shopping-cart`
 const isShoppingCardInLocalStoraqge = !!localStorage.getItem(localStorageItem)
-console.log( isShoppingCardInLocalStoraqge ) 
-console.log(JSON.parse(localStorage.getItem(localStorageItem)))
 
 export default function cartReducer(
     state = isShoppingCardInLocalStoraqge ?
@@ -29,6 +27,17 @@ export default function cartReducer(
             return {
                 ...state,
                 cartItems: [...state.cartItems, item]
+            }
+        case actions.REMOVE_FROM_CART:
+            return {
+                ...state,
+                cartItems: state.cartItems.filter(item => {
+                    return item.id !== action.payload.productId
+                })
+            }
+        case actions.CLEAR_CART:
+            return {
+                cartItems: []
             }
         default:
             return state

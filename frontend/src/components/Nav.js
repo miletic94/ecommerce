@@ -22,13 +22,15 @@ export default function Nav() {
                         <div className="fontSm hoverSecondary cursorPointer">
                             Sign In
                         </div>
-                            <ShoppingCartIcon className="shoppingCart hoverSecondary cursorPointer" />
+                        <Link to={"/cart"}> 
+                            <ShoppingCartIcon className="shoppingCart hoverSecondary" />
+                        </Link>
                     </div>
                 </div> 
                 <div className="searchBar dFlex alignCenter spaceBetween">
                     <input type="text" placeholder="Search Amazona" />
                     <button className="btnPrimary">
-                        <SearchIcon className="searchIcon cursorPointer brightnessLower" />
+                        <SearchIcon className="searchIcon cursorPointer" />
                     </button>
                     
                 </div>
