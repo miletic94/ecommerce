@@ -1,4 +1,4 @@
-export const data = [
+module.exports = [
     {
         "id": 15,
         "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",

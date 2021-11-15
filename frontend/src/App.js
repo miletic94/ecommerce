@@ -8,7 +8,7 @@ import CartPage from "./components/CartPage";
 function App() {
 
   return (
-    <Router>
+    <Router basename='/'>
       <div className="App">
 
       <Nav />
