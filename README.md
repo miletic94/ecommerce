@@ -15,7 +15,3 @@
     3.3. Remove Product
 
 5. Clear Cart funcitonality
-
-6. Search
-
-7. Filter
