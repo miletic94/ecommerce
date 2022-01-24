@@ -1,7 +1,7 @@
 const express = require("express")
 const path = require("path")
 require("path")
-const data = require("./data/data.js")
+let data = require("./data/data.js")
 
 const app = express()
 app.use(express.json())
